@@ -9,7 +9,7 @@ trigger AccountTrigger on Account (after insert, after update, before insert, be
         This line of code creates an instance of the AccountTriggerHandler class and names it handler.
         The AccountTriggerHandler passes through an Instance of the Account Object with a Boolean of isExecuting and an Integer of size.
     */
-    AccountTriggerHandler handler = new AccountTriggerHandler(Trigger.isExecuting, Trigger.size);
+    AccountTriggerHandler handler = new AccountTriggerHandler(Trigger.isExecuting);
 
     /*
     isInsert is a Salesforce Context variable that is available for triggers and returns true if the trigger was fired due to an insert operation.
